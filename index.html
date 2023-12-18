@@ -1,0 +1,69 @@
+<!--
+File: index.html
+GUI Assignment: Implementing a Bit of Scrabble with Drag-and-Drop
+Javier Solares, UMass Lowell Computer Science, Javier_Solares@student.uml.edu
+Copyright (c) 2023 by Javier. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by JS on December, 2023 at 11:30 PM
+Description: This is the main webpage, the Scrabble Game.
+The user will start off with a randomly selected 7 letters on their tile holder.
+They will then drag these letters onto the game board to form words and get
+points based on that word. The game will keep going until all of the letters are
+cleared out and the final score will display.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- link css file here -->
+    <link href="css/style.css" rel="stylesheet">
+    <title>Scrabble GUI HW5</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Home page title -->
+        <h1><span id="mainTitle">Scrabble Game</span></h1>
+        
+        <!-- Label for the 'Word' -->
+        <div class="wordLabel">word:</div>
+
+        <!-- Target blocks (one to seven)-->
+        <div id="gameboard">
+            <div class="targetBlock ui-droppable"></div>
+            <div class="doubleScoreTargetBlock ui-droppable"></div>
+            <div class="targetBlock ui-droppable"></div>
+            <div class="targetBlock ui-droppable"></div>
+            <div class="targetBlock ui-droppable"></div>
+            <div class="doubleScoreTargetBlock ui-droppable"></div>
+            <div class="targetBlock ui-droppable"></div>
+        </div>
+
+        <!-- Label for 'Score' -->
+        <div class="scoreLabel">score:</div>
+        <div id="score">0</div>
+
+        <!-- Error message label -->
+        <div id="errorMessage"></div>
+
+
+        <!-- Letter holder and source blocks -->
+        <div id="tileHolder" class="ui-draggable"></div>
+
+        <!-- Buttons to check word and restart game -->
+        <div class="buttonContainer">
+            <button id="checkButton">Check</button>
+            <button id="restartButton">Restart</button>
+        </div>   
+
+    </div>  
+
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"></script>
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+<script src="js/scrabble.js"></script>

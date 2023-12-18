@@ -1,0 +1,132 @@
+/* <!--
+File: style.css 
+GUI Assignment: Implementing a Bit of Scrabble with Drag-and-Drop
+Javier Solares, UMass Lowell Computer Science, Javier_Solares@student.uml.edu
+Copyright (c) 2023 by Javier. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by JS on December, 2023 at 11:35 PM
+Description: This is the css code for the Scrabble Game.
+This styles and formats the webpage properly.
+--> */
+
+body {
+    background-color: rgb(140, 135, 142);
+    margin: 2%;  
+}
+
+h1 {
+    text-decoration:underline;
+    text-underline-position: under;
+    text-decoration-thickness: 15%;
+    text-decoration-color: darkgreen;
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+}
+
+#mainTitle {
+    /* Using <span> to add an overline along with the underline decorations */
+    text-decoration:overline;
+    text-decoration-color:rgb(167, 149, 80);
+    text-decoration-thickness: 10%;
+    font-size: 200%;
+}
+
+/* Centering and bolding my "Word:" label */
+.wordLabel {
+    font-weight: bolder;
+    font-size: 130%;
+    text-align: center;
+}
+
+/* Placing my "Score" label and the score tracker, which starts at 0, side by side */
+.scoreLabel {
+    font-weight: bolder;
+    font-size: 130%;
+    text-align: center;
+    display: inline-block;
+}
+
+/* Placing my "Score" label and the score tracker, which starts at 0, side by side */
+#score {
+    font-weight: bolder;
+    font-size: 130%;
+    display: inline-block;
+}
+
+
+/* Putting all target blocks side by side */
+.targetBlock {
+    width: 65px;
+    height: 65px;
+    background-image: url(../img/scrabble_blank_target_block.jpg);
+    background-size: cover;
+    border: 3px solid #000; 
+    margin: 2px;
+    display: inline-block;
+}
+
+.doubleScoreTargetBlock {
+    width: 65px;
+    height: 65px;
+    background-image: url(../img/double_word_score_target.png);
+    background-size: cover;
+    border: 3px solid #000;
+    margin: 2px;
+    display: inline-block;
+}
+
+
+/* Displaying the letter rack on the page below the score */
+#tileHolder {
+    background-image: url(../img/scrabble-tile-holder.png);
+    background-position: bottom;    /* Displaying bottom-half of the image */
+    width:640px;
+    height: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+
+/* Spacing out the letter tiles to properly fit the game board */
+.letterTile {
+    width: 65px;
+    height: 65px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 20px;
+}
+
+/* Styling the button container */
+.buttonContainer {
+    margin-top: 80px;
+}
+
+/* Styling the buttons */
+#checkButton, #restartButton {
+    background-color: #13cdcd;
+    color: white;
+    font-size: 150%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 50px;
+    margin-left: 50px;
+    border: 3px solid #000; 
+}
+
+/* Changes button color on hover */
+#checkButton:hover, #restartButton:hover {
+    background-color: #09054a;
+}
+
+/* Styling the error message */
+#errorMessage {
+    color: red;
+    font-size: 125%;
+    margin-top: 25px;
+}
